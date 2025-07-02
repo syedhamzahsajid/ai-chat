@@ -36,11 +36,8 @@
         <div class="col-12 col-md-7 col-lg-9 bg-chat">
           <form action="">
             <div class="container-fluid p-30">
-              <h2 class="fw-medium mb-4">Upload your audio file</h2>
-              <h6 class="bw-bold table-file-reading mb-3">
-                Browse to upload your audio file. Supported formats: MP3, WAV,
-                AAC.
-              </h6>
+              <h2 class="fw-medium mb-4">Upload your audio/video file</h2>
+
               <div class="row justify-content-center">
                 <div class="col-12 col-md-10 bg-white rounded-4 p-3 mb-4">
                   <div class="drop-zone p-5" id="drop-zone">
@@ -48,8 +45,7 @@
                       Drag and drop or browse
                     </h6>
                     <p class="mb-3 text-center fw-normal">
-                      Upload your audio file here. Supported formats: MP3, WAV,
-                      AAC.
+                      Upload your audio file here
                     </p>
                     <input type="file" id="fileInput" />
                     <div class="d-flex justify-content-center">
@@ -66,7 +62,7 @@
                 <div class="container py-4"></div>
               </div>
               <div class="row">
-                <div class="col-12 col-md-6 mb-3">
+                <div class="col-12 mb-3">
                   <label
                     for="exampleFormControlInput1"
                     class="form-label d-none"
@@ -79,40 +75,162 @@
                     placeholder="File Name"
                   />
                 </div>
-                <div class="col-12 col-md-6 mb-3">
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Audio Select</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                  </select>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <div class="dropdown bg-transparent border-0 outline-0 w-100">
+                    <button
+                      class="form-select w-100 text-start d-flex align-items-center justify-content-between py-4"
+                      type="button"
+                      id="audioLanguageBtn"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      style="height: 60px"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span id="selectedText" class="">Audio Language</span>
+                      </div>
+                      <i class="bi bi-chevron-down me-2"></i>
+                    </button>
+
+                    <ul
+                      class="dropdown-menu w-100 shadow-sm"
+                      aria-labelledby="audioLanguageBtn"
+                    >
+                      <li>
+                        <a
+                          class="dropdown-item d-flex align-items-center"
+                          href="#"
+                          data-value="mp3"
+                        >
+                          العربية
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item d-flex align-items-center"
+                          href="#"
+                          data-value="english"
+                        >
+                          English
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="col-12 col-md-6 mb-3">
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Choose Output Type</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <div class="dropdown bg-transparent border-0 outline-0 w-100">
+                    <button
+                      class="form-select w-100 text-start d-flex align-items-center justify-content-between py-4"
+                      type="button"
+                      id="dropdownBtn5"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      style="height: 60px"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span id="selectedText5">Choose Output Type</span>
+                      </div>
+                      <i class="bi bi-chevron-down me-2"></i>
+                    </button>
+
+                    <ul
+                      class="dropdown-menu w-100 shadow-sm"
+                      aria-labelledby="dropdownBtn5"
+                    >
+                      <li>
+                        <a class="dropdown-item" href="#" data-value="summary"
+                          >Summary</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          data-value="fullTranscript"
+                          >Full Transcript</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          data-value="keyTakeaways"
+                          >Key Takeaways</a
+                        >
+                      </li>
+                    </ul>
+
+                    <input type="hidden" id="hiddenInput5" />
+                  </div>
                 </div>
-                <div class="col-12 col-md-6 mb-3">
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Choose Output Format</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <div class="dropdown bg-transparent border-0 outline-0 w-100">
+                    <button
+                      class="form-select w-100 text-start d-flex align-items-center justify-content-between py-4"
+                      type="button"
+                      id="dropdownBtn4"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      style="height: 60px"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span id="selectedText4">Choose Output Format</span>
+                      </div>
+                      <i class="bi bi-chevron-down me-2"></i>
+                    </button>
+
+                    <ul
+                      class="dropdown-menu w-100 shadow-sm"
+                      aria-labelledby="dropdownBtn4"
+                    >
+                      <li>
+                        <a class="dropdown-item" href="#" data-value="pdf">
+                          <img
+                            src="imgs/pdf-ico.svg"
+                            alt="pdf"
+                            class="img-fluid me-2"
+                            width="40"
+                          />PDF</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#" data-value="doc">
+                          <img
+                            src="imgs/doc-ico.svg"
+                            alt="doc"
+                            class="img-fluid me-2"
+                            width="40"
+                          />DOC</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#" data-value="md">
+                          <img
+                            src="imgs/md-ico.svg"
+                            alt="md"
+                            class="img-fluid me-2"
+                            width="40"
+                          />MD</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#" data-value="txt">
+                          <img
+                            src="imgs/txt-ico.svg"
+                            alt="txt"
+                            class="img-fluid me-2"
+                            width="40"
+                          />TXT</a
+                        >
+                      </li>
+                    </ul>
+
+                    <input type="hidden" id="hiddenInput4" />
+                  </div>
                 </div>
               </div>
-              <button class="upload-btn mb-3 mt-4 rounded-4">Process</button>
+              <div class="mt-4 text-center">
+                <button class="upload-btn mb-3 mt-5 rounded-4">Process</button>
+              </div>
             </div>
           </form>
         </div>

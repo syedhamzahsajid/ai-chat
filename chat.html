@@ -3,7 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -23,108 +30,368 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <title>My Documents</title>
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container-fluid h-100">
-      <div class="row h-100">
-        <!-- Sidebar for Large Screen -->
-        <div class="col-lg-2 d-none d-lg-block sidebar p-3 d-flex flex-column">
-          <button class="btn upload-btn mb-3">Upload media</button>
-          <nav class="nav flex-column">
-            <a class="nav-link" href="#">Home</a>
-            <a class="nav-link" href="#">Documents</a>
-            <a class="nav-link active" href="#">AI Chat</a>
-            <a class="nav-link" href="#">Profile</a>
-          </nav>
-          <div class="mt-auto">
-            <a class="nav-link text-danger" href="#">🔓 Logout</a>
-          </div>
-        </div>
-
-        <!-- Main Chat -->
-        <div class="col-md-12 col-lg-10 col-12 chat-container p-0">
-          <!-- Topbar -->
-          <div class="top-bar">
-            <div class="d-flex align-items-center">
-              <button
-                class="menu-btn me-3"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#mobileSidebar"
-              >
-                ☰
-              </button>
-              <h6 class="mb-0 d-md-none">AI Chat</h6>
-            </div>
-            <div class="d-flex align-items-center">
-              <button class="btn btn-sm btn-outline-secondary me-2">
-                العربية
-              </button>
-              <img
-                src="https://via.placeholder.com/32"
-                class="rounded-circle"
-                alt="profile"
-              />
-            </div>
-          </div>
-
-          <!-- Chat Header -->
-          <div class="chat-header d-none d-md-block">
-            <h1 class="fs-32 mb-3 fw-medium">AI chat</h1>
-            <p class="fs-16 mb-3 fw-medium">
-              Ask questions about your audio files or get summaries.
-            </p>
-          </div>
-
-          <!-- Messages -->
-          <div class="chat-messages d-flex flex-column">
-            <!-- ai chat  -->
-            <div class="container-fluid mb-50 bg-chat">
+    <style>
+      body {
+        background: #ffffff;
+      }
+    </style>
+    <!-- header  -->
+    <div class="container-fluid bg-white sticky-top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="imgs/logo.png" alt="logo" class="img-fluid logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <div class="d-flex align-items-center">
+                <div class="dropdown">
+                  <button
+                    class="btn-3 px-4"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <div class="d-flex align-items-center">
+                      <span>English</span>
+                      <span class="ms-3"
+                        ><img
+                          src="imgs/chev-down.png"
+                          class="chevron img-fluid"
+                          alt="chev"
+                      /></span>
+                    </div>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">العربية</a></li>
+                  </ul>
+                </div>
+                <img
+                  src="imgs/thumb.jpg"
+                  class="rounded-circle user-nav ms-2"
+                  alt="profile"
+                />
+              </div>
+            </ul>
+            <div class="container-fluid d-block d-lg-none">
               <div class="row">
-                <div class="col-12 col-lg-8 ai-chat">
+                <div class="col-12">
                   <div class="container-fluid">
                     <div class="row">
-                      <div class="col-md-9 col-12">
-                        <div class="d-flex align-items-end">
-                          <span class="me-2">
-                            <img src="imgs/ai.svg" alt="ai ico"
+                      <div class="col-12 mb-4">
+                        <button class="upload-btn mb-3 mt-4">
+                          <span class="me-2"
+                            ><img
+                              src="imgs/stars-white.png"
+                              class="img-fluid"
+                              alt=""
                           /></span>
-                          <span>
-                            <h1 class="txt-user">Ai Assistant</h1>
-                            <p class="ai-chat-bg m-0">
-                              Lorem ipsum dolor, sit amet consectetur
-                              adipisicing elit. Hic, expedita?
-                            </p></span
+                          Upload Media
+                        </button>
+                        <div class="border"></div>
+                        <div class="col-12 my-2">
+                          <a
+                            href=""
+                            class="sideNavLink d-flex align-items-center non-active-pill"
                           >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- user chat  -->
-            <div class="container-fluid mb-50">
-              <div class="row justify-content-end">
-                <div class="col-12 col-lg-8 ai-chat">
-                  <div class="container-fluid">
-                    <div class="row justify-content-end">
-                      <div class="col-md-9 col-12">
-                        <div class="d-flex align-items-end justify-content-end">
-                          <span>
-                            <p class="txt-user text-end">User</p>
-                            <p class="user-chat-bg m-0">
-                              Lorem ipsum dolor, sit amet consectetur
-                              adipisicing elit. Hic, expedita?
-                            </p></span
-                          >
-                          <span class="ms-2">
                             <img
-                              src="imgs/user.png"
-                              class="img-user"
-                              alt="ai ico"
-                          /></span>
+                              src="imgs/home.png"
+                              class="img-fluid me-2"
+                              alt="Home"
+                            />
+
+                            Home</a
+                          >
+                        </div>
+                        <div class="col-12 mb-2">
+                          <a
+                            href=""
+                            class="sideNavLink d-flex align-items-center non-active-pill"
+                          >
+                            <img
+                              src="imgs/mag.png"
+                              class="img-fluid me-2"
+                              alt="docs"
+                            />
+
+                            Convert</a
+                          >
+                        </div>
+                        <div class="col-12 mb-2">
+                          <a
+                            href=""
+                            class="sideNavLink d-flex align-items-center non-active-pill"
+                          >
+                            <img
+                              src="imgs/Group.png"
+                              class="img-fluid me-2"
+                              alt="ai chat"
+                            />
+
+                            Ai Chat</a
+                          >
+                        </div>
+                        <div class="col-12 mb-2">
+                          <a
+                            href=""
+                            class="sideNavLink d-flex align-items-center active-pill"
+                          >
+                            <img
+                              src="imgs/user-1.png"
+                              class="img-fluid me-2"
+                              alt="profile"
+                            />
+
+                            Profile</a
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-12 pb-4">
+                        <a
+                          href=""
+                          class="sideNavLink d-flex align-items-center text-black"
+                        >
+                          <img
+                            src="imgs/logout.png"
+                            class="img-fluid me-2"
+                            alt="Logout"
+                          />
+
+                          Logout</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- /header  -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <!-- sidenav  -->
+        <!-- ****************** -->
+        <div
+          class="col-12 col-md-5 col-lg-3 col-xxl-2 bg-white min-h-100 d-none d-lg-block"
+        ></div>
+        <!-- ************************* -->
+        <div
+          class="col-12 col-md-5 col-lg-3 col-xxl-2 bg-white min-h-100 position-fixed side-nav-fix d-none d-lg-block"
+        >
+          <!-- sidenav -->
+          <div class="container-fluid">
+            <div class="row min-h-100">
+              <div class="col-12 mb-4">
+                <button class="upload-btn w-100 mb-3 mt-4">
+                  <span class="me-2"
+                    ><img src="imgs/stars-white.png" class="img-fluid" alt=""
+                  /></span>
+                  Upload Media
+                </button>
+                <div class="border"></div>
+                <div class="col-12 my-2">
+                  <a
+                    href=""
+                    class="sideNavLink d-flex align-items-center non-active-pill"
+                  >
+                    <img
+                      src="imgs/home.png"
+                      class="img-fluid me-2"
+                      alt="Home"
+                    />
+
+                    Home</a
+                  >
+                </div>
+                <div class="col-12 mb-2">
+                  <a
+                    href=""
+                    class="sideNavLink d-flex align-items-center non-active-pill"
+                  >
+                    <img src="imgs/mag.png" class="img-fluid me-2" alt="docs" />
+
+                    Convert</a
+                  >
+                </div>
+                <div class="col-12 mb-2">
+                  <a
+                    href=""
+                    class="sideNavLink d-flex align-items-center non-active-pill"
+                  >
+                    <img
+                      src="imgs/Group.png"
+                      class="img-fluid me-2"
+                      alt="ai chat"
+                    />
+
+                    Ai Chat</a
+                  >
+                </div>
+                <div class="col-12 mb-2">
+                  <a
+                    href=""
+                    class="sideNavLink d-flex align-items-center active-pill"
+                  >
+                    <img
+                      src="imgs/user-1.png"
+                      class="img-fluid me-2"
+                      alt="profile"
+                    />
+
+                    Profile</a
+                  >
+                </div>
+              </div>
+
+              <div class="col-12 pb-4 mt-auto side-nav-fix-bottom">
+                <a
+                  href=""
+                  class="sideNavLink d-flex align-items-center text-black"
+                >
+                  <img
+                    src="imgs/logout.png"
+                    class="img-fluid me-2"
+                    alt="Logout"
+                  />
+
+                  Logout</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- /sidenav  -->
+        <!-- main content  -->
+        <div class="col-12 col-md-7 col-lg-9 col-xxl-10 py-3">
+          <div class="container p-30">
+            <div class="row">
+              <div class="col-md-12 chat-container bg-white p-0">
+                <!-- Topbar -->
+                <div class="top-bar">
+                  <div class="d-flex align-items-center">
+                    <h6 class="mb-0 d-md-none">AI Chat</h6>
+                  </div>
+                </div>
+
+                <!-- Chat Header -->
+                <div class="chat-header d-none d-md-block">
+                  <h1 class="fs-32 mb-3 fw-medium">AI chat</h1>
+                  <p class="fs-16 mb-3 fw-medium">
+                    Ask questions about your audio files or get summaries.
+                  </p>
+                </div>
+
+                <!-- Messages -->
+                <div class="chat-messages d-flex flex-column">
+                  <!-- ai chat  -->
+                  <div class="container-fluid mb-50">
+                    <div class="row">
+                      <div class="col-12 col-lg-8 ai-chat">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-md-9 col-12">
+                              <div class="d-flex align-items-end">
+                                <span class="me-2">
+                                  <img src="imgs/ai.svg" alt="ai ico"
+                                /></span>
+                                <span>
+                                  <h1 class="txt-user">Ai Assistant</h1>
+                                  <p class="ai-chat-bg m-0">
+                                    Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Hic, expedita?
+                                  </p></span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- user chat  -->
+                  <div class="container-fluid mb-50">
+                    <div class="row justify-content-end">
+                      <div class="col-12 col-lg-8 ai-chat">
+                        <div class="container-fluid">
+                          <div class="row justify-content-end">
+                            <div class="col-md-9 col-12">
+                              <div
+                                class="d-flex align-items-end justify-content-end"
+                              >
+                                <span>
+                                  <p class="txt-user text-end">User</p>
+                                  <p class="user-chat-bg m-0">
+                                    Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Hic, expedita?
+                                  </p></span
+                                >
+                                <span class="ms-2">
+                                  <img
+                                    src="imgs/user.png"
+                                    class="img-user"
+                                    alt="ai ico"
+                                /></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Input -->
+                <div
+                  class="container-fluid chat-area-bottom-outer sticky-bottom"
+                >
+                  <div class="row justify-content-center">
+                    <div class="col-12">
+                      <div class="chat-area-bottom">
+                        <label for="expanding-textarea" class="d-none">
+                          Type something:
+                        </label>
+                        <span><img src="imgs/stars.png" alt="" /></span>
+                        <textarea
+                          id="expanding-textarea"
+                          placeholder="Type your message..."
+                          oninput="autoExpand(this)"
+                          class="r-textarea"
+                        ></textarea>
+                        <div class="send-outer">
+                          <div class="col-2 pe-0 d-flex align-items-center">
+                            <span class="me-md-3 me-1"
+                              ><a href=""><img src="imgs/mic.png" alt="" /></a
+                            ></span>
+                            <button class="send-btn">
+                              <span class="d-none d-md-block">Send</span>
+                              <span class="d-block d-md-none"
+                                ><i class="fa-solid fa-arrow-up"></i
+                              ></span>
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -133,68 +400,14 @@
               </div>
             </div>
           </div>
-
-          <!-- Input -->
-          <div class="container-fluid chat-area-bottom-outer sticky-bottom">
-            <div class="row justify-content-center">
-              <div class="col-12">
-                <div class="chat-area-bottom">
-                  <label for="expanding-textarea" class="d-none">
-                    Type something:
-                  </label>
-                  <span><img src="imgs/stars.png" alt="" /></span>
-                  <textarea
-                    id="expanding-textarea"
-                    placeholder="Type your message..."
-                    oninput="autoExpand(this)"
-                    class="r-textarea"
-                  ></textarea>
-                  <div class="send-outer">
-                    <div class="col-2 pe-0 d-flex align-items-center">
-                      <span class="me-md-3 me-1"
-                        ><a href=""><img src="imgs/mic.png" alt="" /></a
-                      ></span>
-                      <button class="send-btn btn">
-                        <span class="d-none d-md-block">Send</span>
-                        <span class="d-block d-md-none"
-                          ><i class="fa-solid fa-arrow-up"></i
-                        ></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+        <!-- /main content  -->
       </div>
     </div>
-
-    <!-- Offcanvas Sidebar for Mobile -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title">Menu</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-        ></button>
-      </div>
-      <div class="offcanvas-body d-flex flex-column">
-        <button class="btn upload-btn mb-3 w-100">📤 Upload media</button>
-        <nav class="nav flex-column">
-          <a class="nav-link" href="#">Home</a>
-          <a class="nav-link" href="#">Documents</a>
-          <a class="nav-link active" href="#">AI Chat</a>
-          <a class="nav-link" href="#">Profile</a>
-        </nav>
-        <div class="mt-auto">
-          <a class="nav-link text-danger" href="#">🔓 Logout</a>
-        </div>
-      </div>
-    </div>
-
     <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="master.js"></script>
   </body>
 </html>

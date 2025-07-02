@@ -10,7 +10,7 @@ $(document).ready(function () {
     margin: 10,
 
     // Autoplay options
-    autoplay: true,
+    // autoplay: true,
     autoplayTimeout: 2000, // 2 seconds
     autoplayHoverPause: true, // Pause on hover
   });
@@ -54,18 +54,35 @@ dropZone.addEventListener("drop", (e) => {
 });
 
 // convert
-document.querySelectorAll(".dropdown-item").forEach((item) => {
-  item.addEventListener("click", function (e) {
-    e.preventDefault();
-    const selectedText = this.textContent.trim();
-    const selectedIcon = this.getAttribute("data-icon");
-    const selectedValue = this.getAttribute("data-value");
+// document.querySelectorAll(".dropdown-item").forEach((item) => {
+//   item.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     const selectedText = this.textContent.trim();
+//     const selectedIcon = this.getAttribute("data-icon");
+//     const selectedValue = this.getAttribute("data-value");
 
-    // Update display
-    document.getElementById("selectedText").textContent = selectedText;
-    document.getElementById("selectedIcon").src = selectedIcon;
+//     // Update display
+//     document.getElementById("selectedText").textContent = selectedText;
+//     document.getElementById("selectedIcon").src = selectedIcon;
 
-    // Set hidden input value
-    document.getElementById("audioInput").value = selectedValue;
+//     // Set hidden input value
+//     document.getElementById("audioInput").value = selectedValue;
+//   });
+// });
+
+document.querySelectorAll(".dropdown").forEach((dropdown) => {
+  dropdown.querySelectorAll(".dropdown-item").forEach((item) => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const selectedText = this.textContent.trim();
+      const selectedValue = this.getAttribute("data-value");
+
+      const selectedTextEl = dropdown.querySelector("span[id^='selectedText']");
+      const hiddenInput = dropdown.querySelector("input[type='hidden']");
+
+      if (selectedTextEl) selectedTextEl.textContent = selectedText;
+      if (hiddenInput) hiddenInput.value = selectedValue;
+    });
   });
 });

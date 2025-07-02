@@ -125,6 +125,7 @@ body {
   background-color: #f0f4ff;
   padding: 15px;
 }
+
 .btn-3:focus-within .chevron {
   transform: rotate(180deg);
 }
@@ -225,14 +226,14 @@ body {
 
 .chat-header {
   padding: 20px;
-  background-color: #f7fafc;
+  /* background-color: #f7fafc; */
 }
 
 .chat-messages {
   flex: 1;
   overflow-y: auto;
   padding: 30px 10px;
-  background-color: #f7fafc;
+  /* background-color: #f7fafc; */
 }
 
 .top-bar {
