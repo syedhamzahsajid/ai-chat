@@ -35,12 +35,251 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- header  -->
+    <div class="container-fluid bg-white sticky-top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="imgs/logo.png" alt="logo" class="img-fluid logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <div class="d-flex align-items-center">
+                <div class="dropdown">
+                  <button
+                    class="btn-3 px-4"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <div class="d-flex align-items-center">
+                      <span>English</span>
+                      <span class="ms-3"
+                        ><img
+                          src="imgs/chev-down.png"
+                          class="chevron img-fluid"
+                          alt="chev"
+                      /></span>
+                    </div>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">العربية</a></li>
+                  </ul>
+                </div>
+                <img
+                  src="imgs/thumb.jpg"
+                  class="rounded-circle user-nav ms-2"
+                  alt="profile"
+                />
+              </div>
+            </ul>
+            <div class="container-fluid d-block d-lg-none">
+              <div class="row">
+                <div class="col-12">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-12 mb-4">
+                        <button class="upload-btn mb-3 mt-4">
+                          <span class="me-2"
+                            ><img
+                              src="imgs/stars-white.png"
+                              class="img-fluid"
+                              alt=""
+                          /></span>
+                          Upload Media
+                        </button>
+                        <div class="border"></div>
+                        <div class="col-12 my-2">
+                          <a
+                            href=""
+                            class="sideNavLink d-flex align-items-center non-active-pill"
+                          >
+                            <img
+                              src="imgs/home.png"
+                              class="img-fluid me-2"
+                              alt="Home"
+                            />
+
+                            Home</a
+                          >
+                        </div>
+                        <div class="col-12 mb-2">
+                          <a
+                            href=""
+                            class="sideNavLink d-flex align-items-center non-active-pill"
+                          >
+                            <img
+                              src="imgs/mag.png"
+                              class="img-fluid me-2"
+                              alt="docs"
+                            />
+
+                            Convert</a
+                          >
+                        </div>
+                        <div class="col-12 mb-2">
+                          <a
+                            href=""
+                            class="sideNavLink d-flex align-items-center non-active-pill"
+                          >
+                            <img
+                              src="imgs/Group.png"
+                              class="img-fluid me-2"
+                              alt="ai chat"
+                            />
+
+                            Ai Chat</a
+                          >
+                        </div>
+                        <div class="col-12 mb-2">
+                          <a
+                            href=""
+                            class="sideNavLink d-flex align-items-center active-pill"
+                          >
+                            <img
+                              src="imgs/user-1.png"
+                              class="img-fluid me-2"
+                              alt="profile"
+                            />
+
+                            Profile</a
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-12 pb-4">
+                        <a
+                          href=""
+                          class="sideNavLink d-flex align-items-center text-black"
+                        >
+                          <img
+                            src="imgs/logout.png"
+                            class="img-fluid me-2"
+                            alt="Logout"
+                          />
+
+                          Logout</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- /header  -->
     <div class="container-fluid">
       <div class="row justify-content-center">
-        <div class="col-12 col-md-5 col-lg-3 bg-white">
+        <!-- sidenav  -->
+        <!-- ****************** -->
+        <div
+          class="col-12 col-md-5 col-lg-3 col-xxl-2 bg-white min-h-100 d-none d-lg-block"
+        ></div>
+        <!-- ************************* -->
+        <div
+          class="col-12 col-md-5 col-lg-3 col-xxl-2 bg-white min-h-100 position-fixed side-nav-fix d-none d-lg-block"
+        >
           <!-- sidenav -->
+          <div class="container-fluid">
+            <div class="row min-h-100">
+              <div class="col-12 mb-4">
+                <button class="upload-btn w-100 mb-3 mt-4">
+                  <span class="me-2"
+                    ><img src="imgs/stars-white.png" class="img-fluid" alt=""
+                  /></span>
+                  Upload Media
+                </button>
+                <div class="border"></div>
+                <div class="col-12 my-2">
+                  <a
+                    href=""
+                    class="sideNavLink d-flex align-items-center non-active-pill"
+                  >
+                    <img
+                      src="imgs/home.png"
+                      class="img-fluid me-2"
+                      alt="Home"
+                    />
+
+                    Home</a
+                  >
+                </div>
+                <div class="col-12 mb-2">
+                  <a
+                    href=""
+                    class="sideNavLink d-flex align-items-center non-active-pill"
+                  >
+                    <img src="imgs/mag.png" class="img-fluid me-2" alt="docs" />
+
+                    Convert</a
+                  >
+                </div>
+                <div class="col-12 mb-2">
+                  <a
+                    href=""
+                    class="sideNavLink d-flex align-items-center non-active-pill"
+                  >
+                    <img
+                      src="imgs/Group.png"
+                      class="img-fluid me-2"
+                      alt="ai chat"
+                    />
+
+                    Ai Chat</a
+                  >
+                </div>
+                <div class="col-12 mb-2">
+                  <a
+                    href=""
+                    class="sideNavLink d-flex align-items-center active-pill"
+                  >
+                    <img
+                      src="imgs/user-1.png"
+                      class="img-fluid me-2"
+                      alt="profile"
+                    />
+
+                    Profile</a
+                  >
+                </div>
+              </div>
+
+              <div class="col-12 pb-4 mt-auto side-nav-fix-bottom">
+                <a
+                  href=""
+                  class="sideNavLink d-flex align-items-center text-black"
+                >
+                  <img
+                    src="imgs/logout.png"
+                    class="img-fluid me-2"
+                    alt="Logout"
+                  />
+
+                  Logout</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-md-5 col-lg-9 bg-chat py-3">
+
+        <!-- /sidenav  -->
+        <!-- main content  -->
+        <div class="col-12 col-md-7 col-lg-9 col-xxl-10 bg-chat py-3">
           <div class="container p-30">
             <form action="" class="row">
               <h2 class="fw-medium mb-3">Account</h2>
@@ -48,7 +287,20 @@
                 Manage your account settings and preferences.
               </h6>
               <h5 class="fw-bold mb-3">Profile</h5>
-              <div class="col-12 col-md-6 order-2 order-md-1">
+              <div class="col-12 col-lg-6">
+                <div class="text-center text-md-start">
+                  <img
+                    src="imgs/thumb.jpg"
+                    class="account-user-thumb mb-3"
+                    alt="user"
+                  />
+                  <div class="text-center text-md-start">
+                    <h6 class="fw-bold">Ethan Carter</h6>
+                    <h6 class="fw-normal txt-user">ethan.carter@email.com</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
                 <div class="col-12 mb-3">
                   <div class="mb-1">
                     <label for="exampleFormControlInput1" class="form-label"
@@ -89,41 +341,11 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-md-6 order-1 order-md-2">
-                <div class="text-center">
-                  <img
-                    src="imgs/thumb.jpg"
-                    class="account-user-thumb mb-3"
-                    alt="user"
-                  />
-                  <div class="text-center">
-                    <h6 class="fw-bold">Ethan Carter</h6>
-                    <h6 class="fw-normal txt-user">ethan.carter@email.com</h6>
-                  </div>
-                </div>
-              </div>
+
               <div class="row order-3 order-md-3">
                 <div class="col-12">
-                  <h5 class="fw-bold mb-3">Profile</h5>
-                  <div class="container-fluid">
-                    <div class="col-12 d-flex justify-content-between mb-4">
-                      <span><h6>Notifications</h6></span>
-                      <span>
-                        <div class="form-check form-switch">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="customSwitch"
-                            role="switch"
-                          />
-                          <label
-                            class="form-check-label visually-hidden"
-                            for="customSwitch"
-                            >Toggle switch</label
-                          >
-                        </div></span
-                      >
-                    </div>
+                  <h5 class="fw-bold mb-3">Settings</h5>
+                  <div class="container-fluid px-0">
                     <div class="col-12 d-flex justify-content-between mb-4">
                       <span><h6>Dark Mode</h6></span>
                       <span>
@@ -145,17 +367,17 @@
                     <div class="col-12 d-flex justify-content-between mb-4">
                       <span><h6>Language</h6></span>
                       <span>
-                        <div class="d-flex align-items-center cursor-default">
-                          <span
-                            class="continue-btn rounded-3 fw-medium me-2 px-5 py-2 cursor-default"
+                        <div class="d-flex align-items-center cursor-pointer">
+                          <a
+                            class="continue-btn rounded-3 fw-medium me-2 px-5 py-2 cursor-pointer text-decoration-none"
                           >
                             العربية
-                          </span>
-                          <span
-                            class="upload-btn rounded-3 fw-medium px-3 py-2 shadow-0 cursor-default"
+                          </a>
+                          <a
+                            class="upload-btn rounded-3 fw-medium px-3 py-2 shadow-0 cursor-pointer text-decoration-none"
                           >
                             English
-                          </span>
+                          </a>
                         </div></span
                       >
                     </div>
@@ -163,7 +385,7 @@
                 </div>
                 <div class="col-12 mb-4">
                   <h5 class="fw-bold mb-3">Support</h5>
-                  <div class="container-fluid">
+                  <div class="container-fluid px-0">
                     <div class="col-12 d-flex justify-content-between mb-4">
                       <span><h6>Contact Us</h6></span>
                       <span>
@@ -198,6 +420,7 @@
             </form>
           </div>
         </div>
+        <!-- /main content  -->
       </div>
     </div>
     <!-- Bootstrap JS -->
