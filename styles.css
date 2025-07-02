@@ -50,6 +50,7 @@ body {
 .img-user {
   height: 40px;
   width: 40px;
+  object-fit: cover;
   border-radius: 20px;
 }
 .ai-chat {
@@ -626,6 +627,12 @@ body {
   .sidebar {
     display: none !important;
   }
+  .action-btns {
+    display: grid;
+  }
+  .action-btns:last-child img {
+    margin-right: 1rem;
+  }
 }
 .position-fixed-side {
   position: fixed;
@@ -661,4 +668,12 @@ body {
   left: 19px;
   bottom: 15px;
   width: auto;
+}
+/* imgs svgs  */
+.preferance-card-img {
+  max-width: 48px;
+}
+.pref-lines {
+  height: auto;
+  width: 125px !important;
 }

@@ -10,7 +10,7 @@ $(document).ready(function () {
     margin: 10,
 
     // Autoplay options
-    // autoplay: true,
+    autoplay: true,
     autoplayTimeout: 2000, // 2 seconds
     autoplayHoverPause: true, // Pause on hover
   });
