@@ -595,7 +595,7 @@ body {
     height: 100px;
     width: 100px;
   }
-  .carusal-card {
+  .modal-body .carusal-card-modal {
     width: 50vh;
   }
   .continue-btn-modal {
