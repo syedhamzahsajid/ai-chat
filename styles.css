@@ -87,6 +87,43 @@ body {
   background: linear-gradient(90deg, #8a7aff 0%, #397ef7 100%);
   color: #ffffff;
 }
+.btn-3 {
+  background: #e9eef2;
+  padding: 12px 15px;
+  outline: none;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+}
+.btn-3:focus {
+  outline: none;
+  border: none;
+}
+
+.dropdown-menu.show {
+  border-radius: 12px;
+  display: block;
+  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  outline: none;
+  overflow: hidden;
+}
+.dropdown-item {
+  color: #000000;
+  background-color: #ffffff;
+  font-weight: 500;
+  padding: 15px;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: #000000;
+  background-color: #f0f4ff;
+  padding: 15px;
+}
+.btn-3:focus-within .chevron {
+  transform: rotate(180deg);
+}
 /* ***************************************** */
 
 .chat-area-bottom {
@@ -279,6 +316,9 @@ body {
 }
 .border {
   border: 1px solid #d9d9d9;
+}
+.border-2 {
+  border: 1px solid #e5e8eb;
 }
 .owl-carousel .owl-item img {
   display: inline;
