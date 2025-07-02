@@ -52,3 +52,20 @@ dropZone.addEventListener("drop", (e) => {
     filePreview.textContent = e.dataTransfer.files[0].name;
   }
 });
+
+// convert
+document.querySelectorAll(".dropdown-item").forEach((item) => {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+    const selectedText = this.textContent.trim();
+    const selectedIcon = this.getAttribute("data-icon");
+    const selectedValue = this.getAttribute("data-value");
+
+    // Update display
+    document.getElementById("selectedText").textContent = selectedText;
+    document.getElementById("selectedIcon").src = selectedIcon;
+
+    // Set hidden input value
+    document.getElementById("audioInput").value = selectedValue;
+  });
+});
